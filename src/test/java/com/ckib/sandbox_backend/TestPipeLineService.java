@@ -40,9 +40,19 @@ public class TestPipeLineService {
                 e.printStackTrace();
             }
             //variableList.stream().filter(variable -> variable.getKey().equals("TEST_IMAGE")).collect(Collectors.toList()).get(0).getValue();
-            statsObjectInfoList.add(new StatsObjectInfo(pipelineId + "", status, createdAt, testImageName));
+            //statsObjectInfoList.add(new StatsObjectInfo(pipelineId + "", status, createdAt, testImageName));
         }
         System.out.println("\n***************************************\n");
         System.out.println(statsObjectInfoList);
+    }
+
+    @Test
+    public void testVars() throws GitLabApiException {
+        String testImageName = null;
+        PipelineApi pipelineApi = new GitLabApi(GITLAB_URL, GITLAB_ACCESS_TOKEN).getPipelineApi();
+        List<Pipeline> pipelineList = pipelineApi.getPipelines(PROJECT_ID_OR_PATH);
+        List<Variable> variableList = pipelineApi.getPipelineVariables(PROJECT_ID_OR_PATH, 342L);
+        testImageName = variableList.stream().filter(variable -> variable.getKey().equals("TEST_IMAGE")).findFirst().get().getValue();
+        System.out.println("testImageName: " + testImageName);
     }
 }
