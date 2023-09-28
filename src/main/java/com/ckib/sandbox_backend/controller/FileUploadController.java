@@ -21,7 +21,8 @@ public class FileUploadController {
     private PipelineServiceImpl pipelineService;
     @Autowired
     FileUploadServiceImpl fileUploadService;
-
+//TODO: curl http://localhost:8080/health
+//{"status":"UP","diskSpace":{"status":"UP","total":981190307840,"free":744776503296,"threshold":10485760}}
     @GetMapping("/")
     public String index(Model model) {
         try {
