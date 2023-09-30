@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Dependency uploader to CKIB SandBox</title>
 </head>
-<body bgcolor="silver" style="font-size:99%">
+<body bgcolor="LightCyan" style="font-size:99%">
 <h1>Dependency uploader to CKIB SandBox</h1>
 <hr>
 
@@ -87,10 +87,11 @@ let formData = new FormData();
 <!--pending running failed success-->
 let cells = document.querySelectorAll('td');
 cells.forEach(cell => {
-  if (cell.innerText == 'success') cell.style.backgroundColor = 'green';
-  if (cell.innerText == 'failed') cell.style.backgroundColor = 'red';
-  if (cell.innerText == 'running') cell.style.backgroundColor = 'blue';
-  if (cell.innerText == 'pending') cell.style.backgroundColor = 'blue';
+<!--https://findhow.org/5060-konverter-tsvetov.html-->
+  if (cell.innerText == 'success') cell.style.backgroundColor = 'MediumSpringGreen';
+  if (cell.innerText == 'failed') cell.style.backgroundColor = 'Crimson';
+  if (cell.innerText == 'running') cell.style.backgroundColor = 'MediumSlateBlue';
+  if (cell.innerText == 'pending') cell.style.backgroundColor = 'MediumSlateBlue';
 })
 <!--failed-->
 <!--warning-->
