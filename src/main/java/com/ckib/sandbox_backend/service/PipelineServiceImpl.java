@@ -50,10 +50,6 @@ public class PipelineServiceImpl implements PipelineService {
         }
         System.out.println(statsObjectInfoList);
 
-//        job.pipeLineId, job.jobId, job.createdAt, pipelineVariables.testImageName, job.status
-//        System.out.println("\n***************************************\n");
-//        System.out.println(statsObjectInfoList);
-
         return statsObjectInfoList;
     }
 }

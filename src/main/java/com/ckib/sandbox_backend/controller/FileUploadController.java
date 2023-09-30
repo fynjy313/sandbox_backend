@@ -32,7 +32,6 @@ public class FileUploadController {
         }
         return "uploader";
     }
-//TODO: image logo, GitLab APi
 
     @PostMapping("/upload")
     public ResponseEntity<?> handleFileUpload(@RequestParam("file") MultipartFile file) {
